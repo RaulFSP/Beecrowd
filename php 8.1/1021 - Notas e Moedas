@@ -1,0 +1,33 @@
+<?php
+$entrada = explode(".", trim(fgets(STDIN)));
+$inteiros = $entrada[0];
+$centavos = $entrada[1];
+$n100 = intval($inteiros / 100);
+$n50 = intval($inteiros % 100 / 50);
+$n20 = intval($inteiros % 100 % 50 / 20);
+$n10 = intval($inteiros % 100 % 50 % 20 / 10);
+$n5 = intval($inteiros % 100 % 50 % 20 % 10 / 5);
+$n2 = intval($inteiros % 100 % 50 % 20 % 10 % 5 / 2);
+$m1 = intval($inteiros % 100 % 50 % 20 % 10 % 5 % 2);
+$m50 = intval($centavos / 50);
+$m25 = intval($centavos % 50 / 25);
+$m10 = intval($centavos % 50 % 25 / 10);
+$m05 = intval($centavos % 50 % 25 % 10 / 5);
+$m01 = intval($centavos % 50 % 25 % 10 % 5);
+
+echo "NOTAS:" . PHP_EOL;
+echo $n100 . " nota(s) de R$ 100.00" . PHP_EOL;
+echo $n50 . " nota(s) de R$ 50.00" . PHP_EOL;
+echo $n20 . " nota(s) de R$ 20.00" . PHP_EOL;
+echo $n10 . " nota(s) de R$ 10.00" . PHP_EOL;
+echo $n5 . " nota(s) de R$ 5.00" . PHP_EOL;
+echo $n2 . " nota(s) de R$ 2.00" . PHP_EOL;
+
+echo "MOEDAS:" . PHP_EOL;
+echo $m1 . " moeda(s) de R$ 1.00" . PHP_EOL;
+echo $m50 . " moeda(s) de R$ 0.50" . PHP_EOL;
+echo $m25 . " moeda(s) de R$ 0.25" . PHP_EOL;
+echo $m10 . " moeda(s) de R$ 0.10" . PHP_EOL;
+echo $m05 . " moeda(s) de R$ 0.05" . PHP_EOL;
+echo $m01 . " moeda(s) de R$ 0.01" . PHP_EOL;
+?>
